@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import products from "../data/productos.json";
+import {Polimero} from "../data/prueba.json";
+import Redes from "../components/redes/Redes.astro";
+---
+<Layout title="ListaDePrecios">
+    <main>
+        <section>
+            <h4> Encuentra lo que estas BUSCANDO!!!</h4>
+            <h2> LINEA POLYNEER MUG</h2>
+           
+            <div class="card">
+                {
+                    Polimero.map((item) => {
+                        return (
+                        <div class="card2">
+                            <img src="https://res.cloudinary.com/de9lduii3/image/upload/v1714860959/PRUEBA/dragon_fgstlk.webp" alt="dragon">
+                           <div class="info">
+                              <h4>{item.nombre}</h4>
+                              <h3>$ {item.precio}...</h3>
+                              <p>-Debito</p>
+                              <p>-Transferencia</p>
+                              <p>-Efectivo</p>
+                              <p class="envio">Envios a todo el país</p>
+
+                           </div>
+                        </div>
+                        )
+                    })
+                }
+            </div>
+            <Redes />
+        </section>
+    </main>
+</Layout>
+                            
+                        
+                    
+
+<style>
+    section{
+        padding: 40px 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(240, 229, 226);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    section h2 {
+        padding: 45px 0;
+        font-size: 30px;
+        color: #2d2d2d;
+        text-align: center;
+        text-decoration:underline ;
+        text-decoration-color: #d70788;
+        text-decoration-thickness: 3px;
+    }
+    section h4 {
+        font-size: 25px;
+        color: #2d2d2d;
+    }
+  
+    .card {
+        padding: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+    .card2 {
+        cursor: pointer;
+        width: 300px;
+        height: 475px;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #e0dcdc; 
+        transition: all .4s ease-in-out;
+    }
+    .card2:hover {
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .card2 img {
+        width: 100%;
+        height: 65%;
+        border-bottom: 1px solid #e0dcdc;
+        padding: 10px 0;
+    }
+    .info {
+        padding: 15px;
+    }
+    .info h4 {
+        color: #333;
+        
+        text-align: start;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .info h3 {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: start;
+        color: #333;
+        padding: 5px 0;
+    }
+    .info .envio {
+        text-align: end;
+        color: #d70788;
+        font-size: 14px;
+        padding: 2px;
+    }
+    .info p {
+        font-size: 12px;
+        color: #333;
+        
+    }
+        
+
+   
+    
+    @media (max-width:750px) {
+       
+        section h2 {
+            font-size: 24px;
+            padding: 10px 0;
+        }
+        section h4 {
+            font-size: 20px;
+        }
+        .card {
+            width: 100%;
+            gap: 5px;
+        }
+        .card2 {
+            width: 180px;
+            height: 450px;
+        }
+        .card2 img {
+            height: 55%;
+        }
+            
+            
+    }
+</style>
+
+
+

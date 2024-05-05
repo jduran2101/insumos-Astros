@@ -1,0 +1,83 @@
+---
+const {img, titulo}= Astro.props
+---
+
+
+<article class="modulo3">
+    <img src={img} alt="agendas">
+    <div class="texto1">
+        <h3>{titulo}</h3>
+        <p>VER MÁS</p>
+        <div class="barra-hor"></div>
+    </div>
+</article>
+
+<style>
+     .modulo3 {
+      position: relative;
+      width: 360px;
+      height: 375px;
+      border-radius: 20px;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      transition: 0.4s ease;
+      cursor: pointer;
+    }
+    .modulo3 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+     
+
+
+    .modulo3:hover {
+     transform: scale(0.9);
+     box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
+    }
+
+    .modulo3 .texto1 {
+     position: absolute;
+     padding-top: 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+    .texto1 h3 {
+     color: #fff;
+     font-size: 18px;
+     font-family: "Montserrat", sans-serif !important;
+     font-style: normal;
+     font-weight: 500 !important;
+    }
+
+    .texto1 p {
+     
+     color: #d70788;
+     font-size: 14px;
+
+    }
+
+    .texto1 .barra-hor {
+     margin-top: 2px;
+     width: 50px;
+     height: 2px;
+     background-color: #d70788;
+    }
+    @media (max-width:750px) {
+    .modulo3 {
+        width: 360px;
+        height: 170px;
+    }
+    .modulo3 img {
+        border-radius: 0;
+    }
+
+    .modulo3 .texto1 {
+        padding-top: 20px;
+        width: 200px;
+    }
+  }
+</style>

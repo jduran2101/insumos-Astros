@@ -1,0 +1,122 @@
+---
+interface Props {
+    svg:string;
+    titulo:string;
+    texto:string;
+}
+    
+const {svg, titulo, texto} = Astro.props
+---
+
+<div class="card">
+    <div class="icon">
+        <div class="carro">
+           <img src={svg} alt="">
+        </div>
+    </div>
+    <p class="title">{titulo}</p>
+    <p class="text">{texto} </p>
+         
+    
+</div>
+
+<style>
+    .card {
+    width: 230px;
+    height: 200px;
+    background-color: #fff;
+    margin: 5px;
+    
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.24);
+    border: 2px solid rgba(7, 7, 7, 0.12);
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.card .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    margin-top: 30px;
+    color: #d70788;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card .text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    height: 270px;
+}
+
+.card:hover .text {
+    transition: all 0.3s ease;
+    opacity: 1;
+    max-height: 40px;
+    color: #2d2d2d;
+}
+.icon .carro {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #F0A2D2;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carro img {
+    width: 45px;
+}
+@media (max-width:800px) {
+
+.card {
+    width: 180px;
+    height: 130px;
+    background-color: #fff;
+    border: 1px solid #d70788;
+}
+.card:hover {
+    height: 230px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.icon .carro {
+    width: 60px;
+    height: 50px;
+}
+.carro img {
+    width: 30px;
+}
+
+.card .text {
+    font-size: 10px;
+}
+
+.card .title {
+    margin-top: 10px;
+}
+}
+    
+
+
+</style>

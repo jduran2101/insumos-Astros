@@ -1,0 +1,78 @@
+[
+    {
+        "name":"Cinta termica 10mm",
+        "precio":"2100"
+    },
+    {
+        "name":"Resma a4 para impresora",
+        "precio":"6200",
+        "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1714786516/PRUEBA/dinero-boca-cara-expresion-cambios-dinero-boca-cara-muerte-calavera-emoticon_120675-555_dfnj60.webp"
+        
+    }, 
+    {
+        "name":"Hojas para sublimar chinas",
+        "precio":"5200"
+    }, 
+    {
+        "name":"Hojas para sublimar especifico a4 ART-JET",
+        "precio":"7400"
+    }, 
+    {
+        "name":"Hojas tricapa A4 ART-JET",
+        "precio":"8200"
+    }, 
+    {
+        "name":"Hojas A3 especifico",
+        "precio":"18600"
+    }, 
+    {
+        "name":"Hojas tricapa A3 ",
+        "precio":"20000"
+    }, 
+    {
+        "name":"Hojas A3+ especifico",
+        "precio":"26.600"
+    }, 
+    {
+        "name":"Tintas para sublimar ART-JE",
+        "precio":"5230"
+    }, 
+    {
+        "name":"Tinta fotográfica profesional",
+        "precio":"2800"
+    }, 
+    {
+        "name":"Tinta comercial x4",
+        "precio":"1600"
+    }, 
+    {
+        "name":"Papel fotográfico brillante x 200 grms ART-JET 100 hj",
+        "precio":"10800"
+    },
+    {
+        "name":"Papel fotográfico x 200 grms x 20 hojas ",
+        "precio":"2300"
+    },  
+    {
+        "name":"Papel fotográfico x 115  grms autoadhesivo  100 HJ ",
+        "precio":"16400"
+    },  
+    {
+        "name":"Papel fotografico 160grms x100",
+        "precio":"8300"
+    },  
+    {
+        "name":"Papel autoadhesivo x 115 grms 20 hojas",
+        "precio":"3500"
+    },  
+    {
+        "name":"Papel fotográfico brillante x 180 grms ART-JET 100 hj ",
+        "precio":"9500"
+    },  
+    {
+        "name":"Papel fotográfico brillante x 230 grms ART-JET 100 hj ",
+        "precio":"11.100"
+    } 
+    
+]
+

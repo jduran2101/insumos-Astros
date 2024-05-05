@@ -1,0 +1,40 @@
+---
+import Pcard from "./productos/Pcard.astro";
+---
+<div>
+    <Pcard 
+        img="../img/producto1SinTipo.webp"
+        titulo="Linea Polyneer mug"
+        parrafo="VER MÁS"
+    />
+    <Pcard 
+        img="../img/producto2SinTipo.webp"
+        titulo="Tinta-Papeles y mas"
+        parrafo="VER MÁS"
+    />
+    <Pcard 
+        img="../img/producto3SinTipo.webp"
+        titulo="Linea Neopren y Tropical"
+        parrafo="VER MÁS"
+    />
+</div>
+
+<style>
+    div {
+        width: 90%;
+        display: flex;
+        justify-content:center;
+        gap: 45px;
+        
+        margin-top: 50px;
+        
+    }
+    @media (max-width:750px) {
+        div {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+    }
+</style>

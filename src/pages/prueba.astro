@@ -1,0 +1,64 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Redes from "../components/redes/Redes.astro";
+---
+<Layout title="listaDePrecios">
+    <main>
+        <section>
+            <h4> Encuentra lo que estas BUSCANDO!!!</h4>
+            <h2> LINEA CERAMICA MUG</h2>
+            <div class="lista">
+               <img src="../img/listaprueba.webp" alt="">
+            </div>
+            
+            <Redes />
+        </section>
+    </main>
+
+</Layout>
+
+<style>
+     section{
+        padding: 40px 0;
+        width: 100%;
+        height: auto;
+        background-color: rgb(240, 229, 226);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    section h2 {
+        padding: 45px 0;
+        font-size: 30px;
+        color: #2d2d2d;
+        text-align: center;
+        text-decoration:underline ;
+        text-decoration-color: #d70788;
+        text-decoration-thickness: 3px;
+    }
+    section h4 {
+        font-size: 25px;
+        color: #2d2d2d;
+    }
+    .lista {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .lista img {
+        width: 60%;
+    }
+    @media (max-width:750px) {
+       
+       section h2 {
+           font-size: 24px;
+           padding: 20px 0;
+       }
+       section h4 {
+           font-size: 20px;
+       }
+    }
+        
+  
+</style>

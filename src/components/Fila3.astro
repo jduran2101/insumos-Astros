@@ -1,0 +1,35 @@
+---
+import Mediumcard from "./productos/Mediumcard.astro";
+import Bigcard from "./productos/Bigcard.astro";
+---
+<div>
+    <Mediumcard 
+        img="../img/producto6SinTipo.webp"
+        titulo="Productos Varios"
+    />
+    <Bigcard
+        img="../img/producto7SinTipo.webp"
+        parrafo="Taza mágica  I Chopp I Hoppy"
+        titulo="Productos de Cerámica"
+    />
+</div>
+
+<style>
+    div {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    @media (max-width:750px) {
+        div {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+    }
+        
+</style>
+
+

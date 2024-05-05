@@ -1,0 +1,190 @@
+
+<section class="banner">
+    <div class="img">
+        <div class="texto">
+            <p>¡Tú comodidad es nuestra prioridad!</p>
+            <h3>Sin minimos de compra</h3>
+            <h4>Disfruta la oportunidad de elejir<br> 
+                lo que estas <span>buscando...</span>
+            </h4>
+            <button>VER CATALOGO</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="whatsapp">   
+        <a class="wha"  href="" target = "_black"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+    </div>
+</section>
+
+<style>
+.banner .img {
+    height: 500px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 130px;
+    padding-top: 10px;
+    background-image: url(/img/baner.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: banner 25s infinite linear;
+    transition: all .4s ease;
+}
+   
+@keyframes banner {
+    0%, 30% {
+        background-image: url(/img/baner.webp);
+    }
+    35%, 65% {
+        background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/articulosvarios.webp);
+    }
+    70%, 100% {
+        background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/mo9796_03b.webp);
+    }
+           
+}
+        
+        
+        
+   
+        
+
+
+   
+    
+.img .texto p {
+    margin: 0;
+    color: #d70788;
+    font-size: 22px;
+    font-weight: 600;
+}
+.img .texto span {
+    color: #d70788;
+    font-weight: 600;
+}
+.img .texto h3 {
+    font-size: 40px;
+    color: #fff5fc;
+    padding-top: 30px;
+    margin: 0;
+    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+
+
+.img .texto h4 {
+    margin: 0;
+    font-size: 26px;
+    color: #fff;
+    padding-top: 20px;
+    font-weight: 400;
+}
+.img .texto button {
+    margin-top: 20px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    background-color: #2d2d2d;
+    color: #d70788;
+    border: 2px solid #d70788;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 999;
+    transition: ease 0.3s;
+   
+}
+   
+.whatsapp .wha {
+    text-decoration: none;
+}
+.wha img {
+    width: 60px;
+}
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+@media (max-width:800px){
+    .banner .img {
+        padding-right: 5px;
+        height: 290px;
+        background-attachment: local;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+        
+    .banner .img .texto {
+        width: 500px;
+        padding-left: 50px;
+    }
+    .img .texto h3 {
+        font-size: 30px;
+    }
+    .img .texto h4 {
+        font-size: 22px;
+    }
+    .img .texto p {
+        font-size: 18px;
+    }
+    .texto button {
+        display: none;
+    }
+    
+        
+        
+        
+        
+    .img .texto p {
+        font-size: 15px;
+    }
+    .img .tetxo h3 {
+        font-size: 28px;
+    }
+    .img .texto h4 {
+        font-size: 18px;
+
+    }
+
+}
+
+
+
+
+
+</style>
