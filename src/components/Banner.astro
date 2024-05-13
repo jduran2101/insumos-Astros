@@ -27,21 +27,27 @@
     align-items: center;
     padding-right: 130px;
     padding-top: 10px;
-    background-image: url(/img/baner.webp);
+    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: banner 25s infinite linear;
-    transition: all .4s ease;
+    animation: banner 20s infinite linear;
+    
 }
+    
+    
+    
    
 @keyframes banner {
     0%, 30% {
         background-image: url(/img/baner.webp);
+        transition:  0.4s ease-in;
+        
     }
     35%, 65% {
         background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/articulosvarios.webp);
+        transition: banner 0.4s ease-in;
     }
     70%, 100% {
         background-image:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/mo9796_03b.webp);
@@ -50,7 +56,24 @@
 }
         
         
-        
+ .img .texto {
+    animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   
+ } 
+ 
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+}
+      
    
         
 
@@ -72,34 +95,6 @@
     color: #fff5fc;
     padding-top: 30px;
     margin: 0;
-    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-@-webkit-keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-  }
 }
 
 

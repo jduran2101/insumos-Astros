@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Redes from '../../components/redes/Redes.astro';
+import {uno} from '../../data/prueba2.json';
+
+
+
+
+export async function getStaticPaths() {
+    return uno.map(({ producto,titulo, img }) => {
+       return {
+          params: {producto},
+          props:{titulo, img}
+       }
+       
+      })
+    }
+
+const {titulo, img} = Astro.props 
+    
+---
+<Layout title="Productos">
+<div>
+    <div class="parrafo">
+      <h2>¡{titulo}! </h2>
+      <p>- 👌 Accede a tu catalogo... </p>
+      <p>- ⌨️ Escribime al WhatsApp por consultas</p>
+      <p>- ⌨️ Pasame tu pedido por WhatsApp</p>
+      <p>- 💸 Consultar medios de pago</p>
+      <p>- 🧑‍🤝‍🧑 En mi Facebook podras ver mas info</p>
+      <p>- 😊 Facil , Rapido y sin vueltas </p>
+    </div>
+    <img src={img} alt="prueba">
+    <Redes />
+</div>
+</Layout>
+
+<style>
+    div{
+       
+        padding: 25px 0;
+        width: 100%;
+        background-image: url(/img/ssscribble.svg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .parrafo {
+        backdrop-filter: blur(10px);
+        background-color: transparent;
+        border-radius: 5px;
+        width: 700px;
+        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+        
+        
+ 
+        
+        
+    .parrafo h2  {
+        
+        padding: 25px 0;
+        font-size: 36px;
+        font-weight: 600;
+        color: #d70788;
+        
+    }
+    .parrafo p {
+        font-size: 18px;
+        font-weight: 700;
+        color: #d70788;
+    }
+    div img {
+        margin: 25px 0;
+        width: 700px;
+        border-radius: 15px;
+    }
+    @media (max-width:800px) {
+        div {
+            padding: 5px 0;
+        }
+        .parrafo {
+            width: 98%;
+        }
+        .parrafo h2 {
+            font-size: 24px;
+            padding: 5px 0;
+        }
+        .parrafo p{
+            font-size: 14px;
+        }
+        div img {
+            width: 98%;
+        }
+    }
+        
+        
+</style>

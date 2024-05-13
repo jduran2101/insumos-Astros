@@ -10,7 +10,7 @@ import '@fontsource-variable/montserrat';
 </div>
 <header>
         <div>
-            <img class="logo" src="/img/logo.png" alt="LogoJDInsumos">
+            <img class="logo" src="/img/JDInsumosLogo.png" alt="LogoPolirubro">
         </div>
         <button class="abrir-menu" id="abrir" aria-label="name">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6C4 5.44772 4.44772 5 5 5H19C19.5523 5 20 5.44772 20 6C20 6.55228 19.5523 7 19 7H5C4.44772 7 4 6.55228 4 6Z" fill="currentColor" />
@@ -69,8 +69,9 @@ import '@fontsource-variable/montserrat';
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff5fc;
+    color: #d70788;
     font-size: 15px;
+    font-weight: 600;
     height: 100%;
     animation: pulso 4s infinite;
 }
@@ -80,12 +81,14 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: #2d2d2d;
-    padding: 35px;
-    
+    padding: 5px;
 }
+    
+    
 
 .logo {
-    width: 150px;
+    width: 130px;
+    
 }
 
 header nav {
@@ -136,7 +139,7 @@ header nav .vertical {
     width: 0%;
     height: 2px;
     background-color: #d70788;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-timing-functin: (0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
 }
@@ -145,7 +148,8 @@ header nav .vertical {
 }
 @media (max-width:800px){
     header {
-        padding: 10px;
+        padding: 5px;
+        height: 80px;
     }
     .abrir-menu, .cerrar-menu {
         display: block;
@@ -156,7 +160,7 @@ header nav .vertical {
         color: #ece4e9;
     }
     .logo {
-        width: 150px;
+        width: 100px;
     }
     
         

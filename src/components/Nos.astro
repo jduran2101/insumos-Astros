@@ -1,0 +1,116 @@
+<section class="section">
+    <div class="nos">
+        <h1>NOSOTROS somos <span>TU POLIRUBRO!!!..</span></h1>
+        <p> JDInsumos es un emprendimiento polirrubro gestionado por la familia. 
+            Nos enorgullece ofrecer una amplia gama de productos y servicios para satisfacer las necesidades diarias de nuestros clientes. 
+            Enfocados en la atención al cliente, la política comercial de JDInsumos se basa en brindar 
+            soluciones y asesoramiento a través de un trato cordial y personalizado, ofreciendo un amplio surtido de productos a los mejores precios.
+        </p>
+        <div class="imagenes">
+          <img src="/img/undraw2.svg" alt="">
+          <img src="/img/undraw3.svg" alt="">
+        </div>  
+            
+    </div>
+</section>
+
+<style>
+    .section {
+        width: 100%;
+        height: 390px;
+        background-color: #2d2d2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nos {
+        position: relative;
+        border: 2px solid #d70788;
+        border-radius: 15px;
+        padding: 15px;
+        width: 1000px;
+        height: 340px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .nos::before {
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 186px;
+     background: linear-gradient(#9e8d8a, #d70788);
+     animation: rotate 6s linear infinite;
+    }
+    .nos::after {
+        content: '';
+        position: absolute;
+        background:#424242;
+        inset: 5px;
+        border-radius: 15px;
+    }
+    @keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+   }
+
+   .nos h1{
+        position: relative;
+        font-size: 24px;
+        color: #fff;
+        padding: 15px 0;
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+    .nos span {
+        position: relative;
+        color: #d70788;
+        z-index: 2;
+    }
+    .nos p {
+        position: relative;
+        font-size: 18px;
+        color: #fff;
+        line-height: 30px;
+        z-index: 2;
+        
+    }
+    .imagenes {
+        position: relative;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        z-index: 2;
+    }
+        
+    .imagenes img {
+        width: 90px;
+    }
+    @media (max-width:800px) {
+       .section {
+            width: 100%;
+            height: 600px;
+        }
+        .nos {
+            width: 95%;
+            height: auto;
+        }
+        .nos h1 {
+            font-size: 20px;
+
+        }
+        .nos p {
+            font-size: 15px;
+        }
+       
+    }
+        
+</style>

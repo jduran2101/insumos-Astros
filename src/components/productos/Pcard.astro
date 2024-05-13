@@ -1,5 +1,5 @@
 ---
-const {img, titulo, parrafo} = Astro.props
+const {img, titulo, direccion, parrafo} = Astro.props
 ---
 
 
@@ -7,7 +7,7 @@ const {img, titulo, parrafo} = Astro.props
     <img src={img} alt="productos-termo">
     <div class="texto">
        <h3>{titulo}</h3>
-       <a href="/prueba" target="_blank"><p>{parrafo}</p></a>
+       <a href={direccion}><p>{parrafo}</p></a>
        <div class="barra-hor"></div>
     </div>
 </article>
@@ -19,12 +19,31 @@ const {img, titulo, parrafo} = Astro.props
     .modulo {
       width: 340px;
       height: 300px;
-      border-radius: 30px;
+      border-radius: 20px;
       position: relative;
       transition: 0.4s ease;
       cursor: pointer;
-      
+      view-timeline-name:--image ;
+      view-timeline-axis: block;
+      animation-timeline: --image;
+      animation-name: show;
+      animation-range: entry 20% cover 50%;
+      animation-fill-mode: both;
     }
+    @keyframes show {
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+        
+    }
+   
+
+
     
    
     .modulo img {
@@ -32,8 +51,9 @@ const {img, titulo, parrafo} = Astro.props
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        
     }
+        
+        
    
     .texto {
        position: absolute;
@@ -73,18 +93,18 @@ const {img, titulo, parrafo} = Astro.props
     
     }
     .modulo:hover {
-      transform: scale(0.9);
+      transform: scale(0.98);
       box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
     }
    @media (max-width:750px) {
     
     .modulo {
-        width: 360px;
-        height: 170px;
+        width: 380px;
+        height: 130px;
         position: relative;
     }
     .modulo img {
-        height: 170px;
+        
         object-fit: cover;
         border-radius: 0;
         

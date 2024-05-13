@@ -1,13 +1,14 @@
 ---
-const {img, titulo}= Astro.props
+const {img,direccion, titulo}= Astro.props
 ---
 
 
 <article class="modulo3">
     <img src={img} alt="agendas">
     <div class="texto1">
-        <h3>{titulo}</h3>
-        <p>VER MÁS</p>
+       <a href={direccion}> <h3>{titulo}</h3>
+        <p>VER MÁS</p> 
+       </a>
         <div class="barra-hor"></div>
     </div>
 </article>
@@ -23,6 +24,23 @@ const {img, titulo}= Astro.props
       justify-content: center;
       transition: 0.4s ease;
       cursor: pointer;
+      view-timeline-name:--image ;
+      view-timeline-axis: block;
+      animation-timeline: --image;
+      animation-name: show;
+      animation-range: entry 20% cover 50%;
+      animation-fill-mode: both;
+    }
+    @keyframes show {
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+        
     }
     .modulo3 img {
         width: 100%;
@@ -34,7 +52,7 @@ const {img, titulo}= Astro.props
 
 
     .modulo3:hover {
-     transform: scale(0.9);
+     transform: scale(0.98);
      box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
     }
 
@@ -43,7 +61,7 @@ const {img, titulo}= Astro.props
      padding-top: 30px;
      display: flex;
      flex-direction: column;
-     align-items: center;
+     align-items: start;
     }
     .texto1 h3 {
      color: #fff;
@@ -54,11 +72,14 @@ const {img, titulo}= Astro.props
     }
 
     .texto1 p {
-     
-     color: #d70788;
-     font-size: 14px;
-
+        color: #d70788;
+        font-size: 14px;
     }
+    .texto1 a {
+        text-decoration: none;
+    }
+     
+
 
     .texto1 .barra-hor {
      margin-top: 2px;
@@ -68,8 +89,8 @@ const {img, titulo}= Astro.props
     }
     @media (max-width:750px) {
     .modulo3 {
-        width: 360px;
-        height: 170px;
+        width: 380px;
+        height: 130px;
     }
     .modulo3 img {
         border-radius: 0;

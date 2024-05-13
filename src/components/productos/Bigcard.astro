@@ -1,5 +1,5 @@
 ---
-const {img, parrafo, titulo} = Astro.props
+const {img, parrafo,direccion, titulo} = Astro.props
 ---
 
 
@@ -8,9 +8,9 @@ const {img, parrafo, titulo} = Astro.props
     <div class="texto2">
         <p>{parrafo}</p>
         <h3>{titulo}</h3>
-        <a href="/listaPre" target="_blank" aria-label="ver catalago"><p class="ver">VER MÁS</p></a>
+        <a href={direccion}  aria-label="ver catalago"><p class="ver">VER MÁS</p></a>
         <div class="barra-hor"></div>
-        <a href="/listaPre" target="_blank" aria-label="ver catalago"><button>VER CÁTALOGO</button></a>
+        <a href={direccion}  aria-label="ver catalago"><button>VER CÁTALOGO</button></a>
     </div>
 </article>
 
@@ -34,7 +34,7 @@ const {img, parrafo, titulo} = Astro.props
     }
    
    .modulo2:hover {
-     transform: scale(0.9);
+     transform: scale(0.98);
      box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
     }
     .modulo2 .texto2 .barra-hor {
@@ -83,8 +83,8 @@ const {img, parrafo, titulo} = Astro.props
    
 
     .modulo2 {
-        width: 360px;
-        height: 170px;
+        width: 380px;
+        height: 130px;
     }
     .modulo2 img {
         border-radius: 0;

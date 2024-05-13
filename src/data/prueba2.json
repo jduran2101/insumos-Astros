@@ -1,0 +1,51 @@
+{
+    "uno":[
+        {    
+            "producto":"polineer",
+            "titulo":"Linea Polineer Mug",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715480575/PRUEBA/producto-polimero_c8l5ws.webp"
+        },
+        {
+            "producto": "tinta-papeles",
+            "titulo":"Tinta-Papeles y mas ",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476241/PRUEBA/productos_tintapapeles_kpc6zn.webp"
+        },
+        {
+            "producto":"neopren-tropical",
+            "titulo":"Linea Neopren y Tropical",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476241/PRUEBA/productos_neopren_akat6f.webp",
+            "img2":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476240/PRUEBA/productos_neopren2_yjyflq.webp"
+        },
+        {
+            "producto":"vinilo",
+            "titulo":"Productos para Vinilo",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476240/PRUEBA/productos_vinilo_icuhsx.webp"
+        },
+        {
+            "producto":"agenda-mas",
+            "titulo":"Agenda y mas",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476241/PRUEBA/producto_agenda_mjrkk6.webp"
+        },
+        {
+            "producto":"varios",
+            "titulo":"Productos Varios",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476240/PRUEBA/productos_varios_bdxroj.webp"
+        },
+        {
+            "producto":"ceramica",
+            "titulo":"Productos de Ceramica",
+            "img":"https://res.cloudinary.com/de9lduii3/image/upload/v1715476241/PRUEBA/producto_agenda_mjrkk6.webp"
+        }
+            
+    ]
+}
+   
+   
+   
+   
+   
+   
+
+    
+
+    
