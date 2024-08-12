@@ -1,68 +1,56 @@
 ---
-const {img, titulo, direccion, parrafo} = Astro.props
+const { img, titulo, direccion, parrafo } = Astro.props;
 ---
 
-
 <article class="modulo">
-    <img src={img} alt="productos-termo">
+    <img src={img} alt="productos-termo" />
     <div class="texto">
-       <h3>{titulo}</h3>
-       <a href={direccion}><p>{parrafo}</p></a>
-       <div class="barra-hor"></div>
+        <h3>{titulo}</h3>
+        <a href={direccion}><p>{parrafo}</p></a>
+        <div class="barra-hor"></div>
     </div>
 </article>
-    
-
-    
 
 <style>
     .modulo {
-      width: 340px;
-      height: 300px;
-      border-radius: 20px;
-      position: relative;
-      transition: 0.4s ease;
-      cursor: pointer;
-      view-timeline-name:--image ;
-      view-timeline-axis: block;
-      animation-timeline: --image;
-      animation-name: show;
-      animation-range: entry 20% cover 50%;
-      animation-fill-mode: both;
+        width: 340px;
+        height: 300px;
+        border-radius: 20px;
+        position: relative;
+
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        animation: show linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
     }
     @keyframes show {
-        from{
+        from {
             opacity: 0;
-            scale: 25%;
+            transform: translateX(100px);
         }
         to {
             opacity: 1;
-            scale: 100%;
+            transform: translateX(0px);
         }
-        
     }
-   
+            
+            
 
-
-    
-   
     .modulo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
     }
-        
-        
-   
+
     .texto {
-       position: absolute;
-       top: 10px;
-       left: 20px;
-       padding-top: 15px;
-       display: flex;
-       flex-direction: column;
-       
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
     }
     .texto a {
         text-decoration: none;
@@ -74,43 +62,32 @@ const {img, titulo, direccion, parrafo} = Astro.props
         font-style: normal;
         font-weight: 500 !important;
     }
-      
-      
-      
 
-   .texto p {
-       color: #d70788;
-       font-size: 14px;
-       padding-top: 2px;
+    .texto p {
+        color: #d70788;
+        font-size: 14px;
+        padding-top: 2px;
     }
-   
 
-   .texto .barra-hor {
-       margin-top: 2px;
-       width: 50px;
-       height: 2px;
-       background-color: #d70788;
-    
+    .texto .barra-hor {
+        margin-top: 2px;
+        width: 50px;
+        height: 2px;
+        background-color: #d70788;
     }
     .modulo:hover {
-      transform: scale(0.98);
-      box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
+        transform: scale(0.98);
+        box-shadow: rgba(228, 34, 193, 0.884) 0px 5px 15px;
     }
-   @media (max-width:750px) {
-    
-    .modulo {
-        width: 380px;
-        height: 130px;
-        position: relative;
+    @media (max-width: 750px) {
+        .modulo {
+            width: 380px;
+            height: 130px;
+            position: relative;
+        }
+        .modulo img {
+            object-fit: cover;
+            border-radius: 0;
+        }
     }
-    .modulo img {
-        
-        object-fit: cover;
-        border-radius: 0;
-        
-    }
-  }
-
-
-
 </style>

@@ -1,56 +1,58 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Banner from '../components/Banner.astro';
-import Scard from '../components/Scard.astro';
-import Nosotros from '../components/Nosotros.astro';
-import Nos from '../components/Nos.astro';
-import Fila1 from '../components/Fila1.astro';
-import Fila2 from '../components/Fila2.astro';
-import Fila3 from '../components/Fila3.astro';
+import Layout from "../layouts/Layout.astro";
+import BannerDos from "../components/BannerDos.astro";
+import Scard from "../components/Scard.astro";
+import Nos from "../components/Nos.astro";
+import Fila1 from "../components/Fila1.astro";
+import Fila2 from "../components/Fila2.astro";
+import Fila3 from "../components/Fila3.astro";
 ---
+
+
 
 <Layout title="JDInsumos">
 	<main>
-		<Banner />
+		<BannerDos />
 		<section class="servicios">
-		    <Scard 
-			    svg='../img/truck.webp'
-		        titulo ="Envíos a todo el país"
-		        texto ="Nosotros llevamos tus compras directamente a tu puerta"
-		    />
-			<Scard 
-			    svg='../img/clock.webp'
-				titulo='Horarios WhatsAp'
-				texto='Nuestro horario de atención Lun a Vie: 10:00-12:00 y Sáb: 10:00-13:00'
+			<Scard
+				svg="../img/truck.webp"
+				titulo="Envíos a todo el país"
+				texto="Nosotros llevamos tus compras directamente a tu puerta"
 			/>
-			<Scard 
-			    svg='../img/truck.webp'
-				titulo='Horarios Empresa'
-				texto='Estamos abiertos al público de lunes a sábados: 10:00-12:00 y 13:00-16:00 '
+			<Scard
+				svg="../img/clock.webp"
+				titulo="Horarios WhatsAp"
+				texto="Nuestro horario de atención Lun a Vie: 10:00-12:00 y Sáb: 10:00-13:00"
 			/>
-			<Scard 
-			    svg='../img/clock.webp'
-				titulo='Medios de pago'
-				texto='Aceptamos pagos con débito como a través de transferencia bancaria.'
+			<Scard
+				svg="../img/truck.webp"
+				titulo="Horarios Empresa"
+				texto="Estamos abiertos al público de lunes a sábados: 10:00-12:00 y 13:00-16:00 "
+			/>
+			<Scard
+				svg="../img/clock.webp"
+				titulo="Medios de pago"
+				texto="Aceptamos pagos con débito como a través de transferencia bancaria."
 			/>
 		</section>
 
 		<Nos />
 		<section class="products">
-			<div class="product2">
+			<div id="productos" class="product2">
 				<h2>Nuestros Productos</h2>
 				<p>+ DE 100 PRODUCTOS</p>
 			</div>
-	        <Fila1 />
-		    <Fila2 />
-		    <Fila3 />
+			<Fila1 />
+			<Fila2 />
+			<Fila3 />
 		</section>
-
-			   
 	</main>
 </Layout>
 
 <style>
+	html {
+		scroll-behavior: smooth;
+	}
 	.servicios {
 		width: 100%;
 		display: flex;
@@ -58,7 +60,6 @@ import Fila3 from '../components/Fila3.astro';
 		justify-content: center;
 		gap: 2px;
 		padding: 15px 0;
-		
 	}
 	.products {
 		width: 100%;
@@ -69,27 +70,22 @@ import Fila3 from '../components/Fila3.astro';
 		align-items: center;
 		justify-content: center;
 		gap: 20px;
-		
 	}
 	.product2 {
-    width: 90%;
-    padding: 40px 0;
-    border-bottom: 1px solid #d70788;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-	
-	
-}
-@media (max-width:750px) {
-	.products {
-		width: 100%;
-		height: auto;
-		gap: 3px;
-		padding: 15px 0;
+		width: 90%;
+		padding: 40px 0;
+		border-bottom: 1px solid #d70788;
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
-}
-	
-	
+	@media (max-width: 750px) {
+		.products {
+			width: 100%;
+			height: auto;
+			gap: 3px;
+			padding: 15px 0;
+		}
+	}
 </style>
